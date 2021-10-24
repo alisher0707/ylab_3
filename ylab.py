@@ -14,7 +14,7 @@ print("Параллелепипед: '9' | Пирамида: '10'")
 print("Цилиндр: '11' | Конус: '12'")
 
 v = int(input("\n Наберите номер фигуры: "))
-
+figure = None
 if v == 1:
   print("Квадрат: ")
   figure = Square(
@@ -108,13 +108,14 @@ elif v == 10:
   print("Площадь равно: ", figure.area())
   # print("Периметр равно: ", figure.perimetr())
 
-# elif v == 11:
-#   print("Цилиндр: ")
-#   figure = Сube(
-#     x = int(input('Вводите a = : '))
-# )
-#   print("Площадь равно: ", figure.area())
-#   print("Периметр равно: ", figure.perimetr())
+elif v == 11:
+  print("Цилиндр: ")
+  figure = Сylin(
+    r = int(input('Вводите r = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+  # print("Периметр равно: ", figure.perimetr())
 
 # elif v == 12:
 #   print("Конус: ")
@@ -264,6 +265,16 @@ class Piramida(Shape):
 
   def area(self):
     return self.a * (self.a + 2 * self.h)
+
+
+class Сylin(Shape):
+
+  def __init__(self,r,h):
+    self.r = r
+    self.h = h
+
+  def area(self):
+    return 2 * math.pi * self.r * (self.r + self.h)
 
   # def perimetr(self):
   #   return 12 * self.x
