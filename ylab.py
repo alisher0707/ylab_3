@@ -99,13 +99,14 @@ elif v == 9:
   print("Площадь равно: ", figure.area())
   print("Периметр равно: ", figure.perimetr())
 
-# elif v == 10:
-#   print("Пирамида: ")
-#   figure = Сube(
-#     x = int(input('Вводите a = : '))
-# )
-#   print("Площадь равно: ", figure.area())
-#   print("Периметр равно: ", figure.perimetr())
+elif v == 10:
+  print("Пирамида: ")
+  figure = Piramida(
+    a = int(input('Вводите a = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+  # print("Периметр равно: ", figure.perimetr())
 
 # elif v == 11:
 #   print("Цилиндр: ")
@@ -257,15 +258,15 @@ class Parallelep():
 
 class Piramida(Shape):
 
-  def __init__(self,x, ):
-    self.x = x
+  def __init__(self,a,h):
+    self.a = a
+    self.h = h
 
   def area(self):
-    return 6 * self.x ** 2
+    return self.a * (self.a + 2 * self.h)
 
-  def perimetr(self):
-    return 12 * self.x
+  # def perimetr(self):
+  #   return 12 * self.x
 
-# circle = Circle(8)
-# print(circle.perimetr())
-# print(circle.area())
+#  def volume(self):
+#     return  4/3 * math.pi * r**3
