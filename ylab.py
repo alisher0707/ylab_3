@@ -2,119 +2,7 @@ import math
 
 
 
-print("Выберите фигуру: ")
-# круг, квадрат, прямоугольник, треугольник, трапеция, ромб.
-print("Квадрат - '1' | Прямоугольник - '2' ")
-print("Круг - '3' | Ромб - '4' ")
-print("Треугольник - '5' | Трапеция - '6'")
 
-# сфера, куб, параллелепипед, пирамида, цилиндр, конус.
-print("Сфера: '7' | Куб: '8'")
-print("Параллелепипед: '9' | Пирамида: '10'")
-print("Цилиндр: '11' | Конус: '12'")
-
-v = int(input("\n Наберите номер фигуры: "))
-figure = None
-if v == 1:
-  print("Квадрат: ")
-  figure = Square(
-    x = int(input('Вводите a = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-elif v == 2:
- print("Прямоугольник: ")
- figure = Rectangle(
-    x = int(input('Вводите a = : ')),
-    y = int(input('Вводите b = : '))
-)
- print("Площадь равно: ", figure.area())
- print("Периметр равно: ", figure.perimetr())
-
-elif v == 3:
-  print("Круг: ")
-  figure = Circle(
-    r = int(input('Вводите r = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-elif v == 4:
-  print("Ромб: ")
-  figure = Romb(
-    x = int(input('Вводите a = : ')),
-    h = int(input('Вводите h = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-elif v == 5:
-  print("Треугольник: ")
-  figure = Triangle(
-    a = int(input('Вводите a = : ')),
-    b = int(input('Вводите b = : ')),
-    c = int(input('Вводите c = : ')),
-    h = int(input('Вводите h = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-elif v == 6:
-  print("Трапеция: ")
-  figure = Trapez(
-    a = int(input('Вводите a = : ')),
-    b = int(input('Вводите b = : ')),
-    c = int(input('Вводите c = : ')),
-    d = int(input('Вводите d = : ')),
-    h = int(input('Вводите h = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-# сфера, куб, параллелепипед, пирамида, цилиндр, конус.
-elif v == 7:
-  print("Сфера: ")
-  figure = Sfera(
-    r = int(input('Вводите r = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Объем: ", figure.volume())
-
-elif v == 8:
-  print("Куб: ")
-  figure = Сube(
-    x = int(input('Вводите x = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-elif v == 9:
-  print("Параллелепипед: ")
-  figure = Parallelep(
-    a = int(input('Вводите a = : ')),
-    b = int(input('Вводите b = : ')),
-    c = int(input('Вводите c = : '))
-)
-  print("Площадь равно: ", figure.area())
-  print("Периметр равно: ", figure.perimetr())
-
-elif v == 10:
-  print("Пирамида: ")
-  figure = Piramida(
-    a = int(input('Вводите a = : ')),
-    h = int(input('Вводите h = : '))
-)
-  print("Площадь равно: ", figure.area())
-  # print("Периметр равно: ", figure.perimetr())
-
-elif v == 11:
-  print("Цилиндр: ")
-  figure = Сylin(
-    r = int(input('Вводите r = : ')),
-    h = int(input('Вводите h = : '))
-)
-  print("Площадь равно: ", figure.area())
   # print("Периметр равно: ", figure.perimetr())
 
 # elif v == 12:
@@ -275,6 +163,122 @@ class Сylin(Shape):
 
   def area(self):
     return 2 * math.pi * self.r * (self.r + self.h)
+
+
+print("Выберите фигуру: ")
+# круг, квадрат, прямоугольник, треугольник, трапеция, ромб.
+print("Квадрат - '1' | Прямоугольник - '2' ")
+print("Круг - '3' | Ромб - '4' ")
+print("Треугольник - '5' | Трапеция - '6'")
+
+# сфера, куб, параллелепипед, пирамида, цилиндр, конус.
+print("Сфера: '7' | Куб: '8'")
+print("Параллелепипед: '9' | Пирамида: '10'")
+print("Цилиндр: '11' | Конус: '12'")
+
+v = int(input("\n Наберите номер фигуры: "))
+figure = None
+if v == 1:
+  print("Квадрат: ")
+  figure = Square(
+    x = int(input('Вводите a = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+elif v == 2:
+ print("Прямоугольник: ")
+ figure = Rectangle(
+    x = int(input('Вводите a = : ')),
+    y = int(input('Вводите b = : '))
+)
+ print("Площадь равно: ", figure.area())
+ print("Периметр равно: ", figure.perimetr())
+
+elif v == 3:
+  print("Круг: ")
+  figure = Circle(
+    r = int(input('Вводите r = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+elif v == 4:
+  print("Ромб: ")
+  figure = Romb(
+    x = int(input('Вводите a = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+elif v == 5:
+  print("Треугольник: ")
+  figure = Triangle(
+    a = int(input('Вводите a = : ')),
+    b = int(input('Вводите b = : ')),
+    c = int(input('Вводите c = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+elif v == 6:
+  print("Трапеция: ")
+  figure = Trapez(
+    a = int(input('Вводите a = : ')),
+    b = int(input('Вводите b = : ')),
+    c = int(input('Вводите c = : ')),
+    d = int(input('Вводите d = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+# сфера, куб, параллелепипед, пирамида, цилиндр, конус.
+elif v == 7:
+  print("Сфера: ")
+  figure = Sfera(
+    r = int(input('Вводите r = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Объем: ", figure.volume())
+
+elif v == 8:
+  print("Куб: ")
+  figure = Сube(
+    x = int(input('Вводите x = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+elif v == 9:
+  print("Параллелепипед: ")
+  figure = Parallelep(
+    a = int(input('Вводите a = : ')),
+    b = int(input('Вводите b = : ')),
+    c = int(input('Вводите c = : '))
+)
+  print("Площадь равно: ", figure.area())
+  print("Периметр равно: ", figure.perimetr())
+
+elif v == 10:
+  print("Пирамида: ")
+  figure = Piramida(
+    a = int(input('Вводите a = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+  # print("Периметр равно: ", figure.perimetr())
+
+elif v == 11:
+  print("Цилиндр: ")
+  figure = Сylin(
+    r = int(input('Вводите r = : ')),
+    h = int(input('Вводите h = : '))
+)
+  print("Площадь равно: ", figure.area())
+
 
   # def perimetr(self):
   #   return 12 * self.x
